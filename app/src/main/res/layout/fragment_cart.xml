@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CartFragment"
+    android:orientation="vertical">
+
+    <com.example.hhw.c2cshoping.view.MyToolbar
+        android:id="@+id/cart_toolbar"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:rightButtonText="编辑"
+        app:isShowSearchView="false" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cart_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:id="@+id/cart_under"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="#802f4f4f"
+        android:gravity="center_vertical"
+        android:layout_height="50dp"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/cart_check_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:checked="false"
+            android:text="全选"
+            android:textSize="17sp"
+            style="@style/customCheckbox"
+            />
+
+        <TextView
+            android:id="@+id/cart_tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cart_check_all"
+            android:layout_marginLeft="40dp"
+            android:layout_centerVertical="true"
+            android:text="合计:0.00"
+            android:textSize="17sp"/>
+
+        <Button
+            android:id="@+id/cart_btn_order"
+            android:layout_width="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:minHeight="60dp"
+            android:minWidth="120dp"
+            android:text="去结算"
+            style="@style/bigRedButton"
+            android:layout_height="50dp"/>
+
+
+        <Button
+            android:id="@+id/cart_btn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:minHeight="60dp"
+            android:minWidth="120dp"
+            android:text="删除"
+            style="@style/bigRedButton"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,103 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MineFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.hhw.c2cshoping.view.MyToolbar
+            android:id="@+id/mine_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:visibility="visible"
+            app:isShowSearchView="false" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <com.example.hhw.c2cshoping.view.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/mine_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/default_head"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#ffffff" />
+
+            <TextView
+                android:id="@+id/mine_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="130dp"
+                android:text="未登录" />
+            <TextView
+                android:id="@+id/mine_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="余额:0.00元"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView
+                android:id="@+id/mine_order"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="我的订单"
+                android:gravity="center_vertical"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e2d6ff" />
+            <TextView
+                android:id="@+id/mine_commodity"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="我的商品"
+                android:gravity="center_vertical"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e2d6ff" />
+            <TextView
+                android:id="@+id/mine_chpw"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="修改密码"
+                android:gravity="center_vertical"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e2d6ff" />
+            <TextView
+                android:id="@+id/mine_address"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="我的收货地址"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/mine_logout"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="退出登陆"
+            android:visibility="gone" />
+    </LinearLayout>
+</FrameLayout>

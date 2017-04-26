@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">C2CShoping</string>
+    <string name="title_home">主页</string>
+    <string name="title_sell">卖家</string>
+    <string name="title_cart">购物车</string>
+    <string name="title_mine">我的</string>
+    <string name="title_activity_register">Registered Activity</string>
+
+</resources>

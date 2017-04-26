@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hhw.c2cshoping.activity.ConfirmOrderActivity">
+    <com.example.hhw.c2cshoping.view.MyToolbar
+        android:id="@+id/order_confirm_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:visibility="visible"
+        app:isShowSearchView="false" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/order_confirm_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/order_confirm_toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="合计: $ 998"
+            android:gravity="right|center_vertical"
+            android:paddingRight="10dp"/>
+        <Button
+            android:id="@+id/order_confirm_payButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="确认订单"/>
+    </LinearLayout>
+</LinearLayout>
